@@ -2,21 +2,37 @@
   "name": "mab-library",
   "version": "1.0.0",
   "description": "library mab example",
-  "main": "index.js",
+  "main": "dist/cjs/index.js",
   "repository": "https://github.com/Mab9520/man-library.git",
   "author": "Mab9520 <mabepan46@gmail.com>",
   "license": "MIT",
-  "private": true,
+  "private": false,
+  "files": [
+    "dist"
+  ],
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-terser": "^0.4.3",
+    "@rollup/plugin-typescript": "^11.1.1",
     "@types/react": "^18.2.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "rollup": "^3.23.0",
+    "rollup-plugin-dts": "^5.3.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-terser": "^7.0.2",
     "tailwindcss": "^3.3.2",
+    "tslib": "^2.5.2",
     "typescript": "^5.0.4"
   },
   "scripts": {
     "ts": "tsc",
     "ts:init": "yarn run ts --init",
-    "build-styles": "npx tailwindcss -i ./src/index.css -o ./src/output.css"
+    "build-styles": "npx tailwindcss -i ./src/index.css -o ./src/output.css",
+    "build": "yarn clean && yarn build-styles && yarn ts && rollup -c --bundleConfigAsCjs",
+    "clean": "rm -rf dist/ && rm ./src/output.css"
   }
 }
