@@ -1,0 +1,10 @@
+{
+  "name": "mab-library",
+  "version": "1.0.0",
+  "description": "library mab example",
+  "main": "index.js",
+  "repository": "https://github.com/Mab9520/man-library.git",
+  "author": "Mab9520 <mabepan46@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
