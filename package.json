@@ -16,6 +16,7 @@
   },
   "scripts": {
     "ts": "tsc",
-    "ts:init": "yarn run ts --init"
+    "ts:init": "yarn run ts --init",
+    "build-styles": "npx tailwindcss -i ./src/index.css -o ./src/output.css"
   }
 }
