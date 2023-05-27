@@ -6,5 +6,12 @@
   "repository": "https://github.com/Mab9520/man-library.git",
   "author": "Mab9520 <mabepan46@gmail.com>",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  },
+  "scripts" : {
+    "ts": "tsc",
+    "ts:init" : "yarn run ts --init"
+  }
 }
