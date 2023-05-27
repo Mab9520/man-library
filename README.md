@@ -1,0 +1,2 @@
+# man-library
+library init
